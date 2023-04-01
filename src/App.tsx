@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Button } from '@mui/material';
 import ThemeProvider from './themes';
+import { Button } from './design/buttons/Button';
 
 function App() {
   const [count, setCount] = useState(0);
