@@ -1,15 +1,30 @@
-import { useState } from 'react';
+import Router from './router';
 import ThemeProvider from './themes';
-import { Button } from './design/buttons/Button';
+import ToastProvider from './components/ToastProvider';
+import ScrollToTop from './components/ScrollToTop';
+import LoadingScreen from './design/loader/LoadingScreen';
+import { Suspense } from 'react';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <ThemeProvider>
-      <Button variant="contained" onClick={() => setCount((count) => count + 1)}>
-        count is {count}
-      </Button>
+      <Suspense
+        fallback={
+          <LoadingScreen
+            sx={{
+              top: 0,
+              left: 0,
+              width: 1,
+              zIndex: 9999,
+              position: 'fixed'
+            }}
+          />
+        }
+      >
+        <ScrollToTop />
+        <Router />
+        <ToastProvider />
+      </Suspense>
     </ThemeProvider>
   );
 }

@@ -16,8 +16,7 @@ function responsiveFontSizes({ sm, md, lg }: { sm: number; md: number; lg: numbe
   };
 }
 
-const DEFAULT_FONT =
-  'Poppins ,acumin-pro, "Acumin Pro", "Helvetica Neue", Helvetica, Arial, sans-serif';
+const DEFAULT_FONT = 'Poppins, sans-serif';
 
 const typography = {
   fontFamily: DEFAULT_FONT,

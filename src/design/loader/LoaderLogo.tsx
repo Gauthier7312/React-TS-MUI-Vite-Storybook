@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 import { Link as RouterLink } from 'react-router-dom';
 // @mui
-import { Box } from '@mui/material';
-import logoSvg from '../assets/Icons/logo.svg';
+import Iconify from '../../components/Iconify';
 
 // ----------------------------------------------------------------------
 
@@ -12,9 +11,7 @@ Logo.propTypes = {
 };
 
 export default function Logo({ disabledLink = true, sx }: any) {
-  const logo = (
-    <Box component="img" src={logoSvg} alt={'logo'} sx={{ height: 120, width: 120, ...sx }} />
-  );
+  const logo = <Iconify icon={'line-md:loading-twotone-loop'} width={70} height={70} />;
 
   if (disabledLink) {
     return <>{logo}</>;

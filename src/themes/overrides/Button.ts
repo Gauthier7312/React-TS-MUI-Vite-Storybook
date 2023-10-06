@@ -12,7 +12,8 @@ export default function Button(theme: Theme) {
         root: {
           borderRadius: 10,
           '&:hover': {
-            boxShadow: 'none'
+            boxShadow: 'none',
+            backgroundColor: theme.palette.primary.main
           }
         },
         sizeLarge: {

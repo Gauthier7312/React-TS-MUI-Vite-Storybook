@@ -1,8 +1,8 @@
 import axios from 'axios';
 // import { HOST_API, NO_DASHBOARD_API_ROOT } from '../config';
 
-export const HOST_API = process.env.REACT_APP_HOST_API_KEY || '';
-export const NO_DASHBOARD_API_ROOT = process.env.REACT_NO_DASHBOARD_API_ROOT_KEY || '';
+export const HOST_API = '';
+export const NO_DASHBOARD_API_ROOT = '';
 
 const axiosInstance = axios.create({
   baseURL: HOST_API
